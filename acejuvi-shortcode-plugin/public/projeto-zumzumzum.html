@@ -1,0 +1,1512 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Projeto ZumZumZum - ACEJUVI</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:auto;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#d5e3fc","surface-container-highest":"#d5e3fc","error-container":"#ffdad6","on-secondary-fixed-variant":"#003ea8","on-primary-fixed":"#00164e","on-secondary-container":"#fefcff","tertiary-container":"#004a31","background":"#f8f9ff","on-primary":"#ffffff","primary":"#00236f","on-secondary":"#ffffff","on-surface":"#0d1c2e","on-primary-container":"#90a8ff","secondary-fixed":"#dbe1ff","surface-container-low":"#eff4ff","error":"#ba1a1a","on-tertiary-fixed":"#002113","on-surface-variant":"#444651","outline":"#757682","on-tertiary-fixed-variant":"#005236","on-primary-fixed-variant":"#264191","on-background":"#0d1c2e","inverse-surface":"#233144","secondary-fixed-dim":"#b4c5ff","surface-bright":"#f8f9ff","secondary-container":"#316bf3","primary-container":"#1e3a8a","on-tertiary":"#ffffff","tertiary-fixed":"#6ffbbe","on-error":"#ffffff","primary-fixed-dim":"#b6c4ff","secondary":"#0051d5","on-secondary-fixed":"#00174b","surface":"#f8f9ff","outline-variant":"#c5c5d3","surface-container-lowest":"#ffffff","tertiary":"#00311f","surface-container-high":"#dce9ff","inverse-on-surface":"#eaf1ff","surface-container":"#e6eeff","surface-tint":"#4059aa","on-tertiary-container":"#27c38a","inverse-primary":"#b6c4ff","tertiary-fixed-dim":"#4edea3","on-error-container":"#93000a","primary-fixed":"#dce1ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xs":"0.25rem","space-2xl":"3rem","container-max":"1280px","space-3xl":"4.5rem","space-4xl":"6rem","gutter-mobile":"1rem","space-md":"1rem","space-xs":"0.5rem","space-lg":"1.5rem","gutter-desktop":"2rem","space-sm":"0.75rem","space-xl":"2rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-md":["Inter"],"display-hero":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"]},"fontSize":{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"26px","fontWeight":"600"}]}}}};</script><style id="acejuvi-responsive-polish-style">
+  :root {
+    --acejuvi-header-offset: 9rem;
+    --acejuvi-scroll-offset: 8.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-width: 0;
+  }
+
+  main {
+    padding-top: var(--acejuvi-header-offset) !important;
+  }
+
+  main section[id], footer[id] {
+    scroll-margin-top: var(--acejuvi-scroll-offset);
+  }
+
+  img, video, iframe {
+    max-width: 100%;
+  }
+
+  #acejuvi-site-header {
+    transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    will-change: transform;
+  }
+
+  #acejuvi-site-header > div:first-child {
+    max-height: 48px;
+    overflow: hidden;
+    transition: max-height 220ms ease, opacity 180ms ease, padding 220ms ease;
+  }
+
+  #acejuvi-site-header.is-scrolled {
+    box-shadow: 0 18px 34px -22px rgba(30, 58, 138, 0.65);
+  }
+
+  #acejuvi-site-header.is-scrolled > div:first-child {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #acejuvi-site-header a.is-section-active {
+    color: #00236f !important;
+    font-weight: 800 !important;
+  }
+  #acejuvi-site-header a,
+  #acejuvi-site-header button,
+  main a,
+  main button,
+  footer a,
+  footer button {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #acejuvi-site-header a:focus,
+  #acejuvi-site-header button:focus,
+  main a:focus,
+  main button:focus,
+  footer a:focus,
+  footer button:focus {
+    outline: none !important;
+    border-color: inherit;
+  }
+
+  #acejuvi-site-header a:focus-visible,
+  #acejuvi-site-header button:focus-visible,
+  main a:focus-visible,
+  main button:focus-visible,
+  footer a:focus-visible,
+  footer button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  #acejuvi-site-header a,
+  #acejuvi-site-header button,
+  .hero-dot,
+  .about-dot,
+  [data-acejuvi-instagram-feed] a,
+  #pix-interactive-box a,
+  #pix-interactive-box button {
+    border-color: transparent !important;
+  }
+
+  .acejuvi-mobile-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 9999px;
+    background: #eff4ff;
+    color: #00236f;
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.12);
+    cursor: pointer;
+  }
+
+  .acejuvi-mobile-drawer {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: calc(var(--acejuvi-header-offset) - .25rem);
+    z-index: 49;
+    display: none;
+    flex-direction: column;
+    gap: .35rem;
+    max-height: calc(100vh - var(--acejuvi-header-offset) - 1rem);
+    overflow-y: auto;
+    padding: .75rem;
+    border: 1px solid rgba(197, 197, 211, .75);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, .98);
+    box-shadow: 0 24px 50px -20px rgba(13, 28, 46, .35);
+  }
+
+  .acejuvi-mobile-drawer.is-open {
+    display: flex;
+    animation: acejuvi-drawer-in 180ms ease both;
+  }
+
+  .acejuvi-mobile-drawer a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .85rem 1rem;
+    border-radius: .75rem;
+    color: #0d1c2e;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .acejuvi-mobile-drawer a:hover,
+  .acejuvi-mobile-drawer a.is-section-active {
+    background: #eff4ff;
+    color: #00236f;
+  }
+
+  @keyframes acejuvi-drawer-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+   .acejuvi-entry-ready { opacity: 0; transform: translateY(28px); transition: opacity 520ms ease, transform 520ms ease; } .acejuvi-entry-visible { opacity: 1; transform: translateY(0); } #acejuvi-final-cta { min-height: 0 !important; height: auto !important; max-height: none !important; display: block !important; padding-top: 42px !important; padding-bottom: 42px !important; align-items: initial !important; justify-content: initial !important; } #acejuvi-final-cta > .max-w-container-max { min-height: 0 !important; } @media (max-width: 767px) { #acejuvi-final-cta { padding-top: 32px !important; padding-bottom: 32px !important; } .acejuvi-entry-ready { transform: translateY(18px); } } @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }    .acejuvi-mobile-drawer.is-open { animation: none; transition: none; transform: none; opacity: 1; }
+  }
+
+  @media (max-width: 1199px) {
+    .acejuvi-mobile-toggle { display: inline-flex; }
+    #acejuvi-site-header nav { display: none !important; }
+    #acejuvi-site-header > div:last-child > div { gap: .75rem; }
+  }
+
+  @media (max-width: 767px) {
+    :root {
+      --acejuvi-header-offset: 8.25rem;
+      --acejuvi-scroll-offset: 7.75rem;
+    }
+
+    #acejuvi-site-header > div:first-child .max-w-container-max {
+      justify-content: center;
+      text-align: center;
+    }
+
+    #acejuvi-site-header > div:first-child p {
+      font-size: 11px !important;
+      line-height: 15px !important;
+    }
+
+    #acejuvi-site-header > div:first-child a,
+    #acejuvi-site-header > div:first-child button {
+      display: none !important;
+    }
+
+    #acejuvi-site-header .h-20 {
+      height: 68px !important;
+    }
+
+    #acejuvi-site-header img {
+      height: 44px !important;
+    }
+
+    #acejuvi-site-header [data-path="doacoes-pix"] {
+      padding: .65rem .8rem !important;
+      min-height: 42px;
+    }
+
+    #acejuvi-site-header [data-path="doacoes-pix"] span:last-child {
+      font-size: 0 !important;
+    }
+
+    #acejuvi-site-header [data-path="doacoes-pix"] span:last-child::after {
+      content: "DOAR";
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    main > .flex > section,
+    main section {
+      padding-top: 2.25rem !important;
+      padding-bottom: 2.25rem !important;
+    }
+
+    .text-display-hero,
+    .font-display-hero.text-display-hero {
+      font-size: clamp(2rem, 9vw, 3rem) !important;
+      line-height: 1.12 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .text-headline-lg,
+    .font-headline-lg.text-headline-lg {
+      font-size: clamp(1.65rem, 7vw, 2.25rem) !important;
+      line-height: 1.16 !important;
+      letter-spacing: 0 !important;
+    }
+
+    .text-headline-md,
+    .font-headline-md.text-headline-md {
+      font-size: 1.45rem !important;
+      line-height: 1.25 !important;
+    }
+
+    .text-body-lg,
+    .font-body-lg.text-body-lg {
+      font-size: 1rem !important;
+      line-height: 1.65 !important;
+    }
+
+    a, button {
+      max-width: 100%;
+    }
+
+    .inline-flex {
+      text-align: center;
+    }
+
+    [class*="grid-cols-"], [class*="flex-row"] {
+      min-width: 0;
+    }
+
+    [class*="rounded-3xl"], [class*="rounded-2xl"] {
+      max-width: 100%;
+    }
+
+    [class*="px-space-xl"] {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    [class*="gap-space-xl"] {
+      gap: 1.35rem !important;
+    }
+
+    footer .grid, footer nav, footer p, footer div {
+      text-align: left;
+    }
+  }
+</style><style id="acejuvi-wordpress-override-fix">
+  @media (min-width: 1200px) {
+    #acejuvi-site-header .acejuvi-mobile-toggle {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+  }
+
+  #acejuvi-site-header .acejuvi-mobile-toggle {
+    border: 0 !important;
+    outline: 0 !important;
+    color: #00236f !important;
+    background: #eff4ff !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.12) !important;
+  }
+
+  #acejuvi-site-header nav button,
+  #acejuvi-site-header nav button:hover,
+  #acejuvi-site-header nav button:focus,
+  #acejuvi-site-header nav button:active,
+  #acejuvi-site-header nav a,
+  #acejuvi-site-header nav a:hover,
+  #acejuvi-site-header nav a:focus,
+  #acejuvi-site-header nav a:active {
+    border-color: transparent !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+
+  #acejuvi-site-header nav button,
+  #acejuvi-site-header nav button:focus,
+  #acejuvi-site-header nav button:active {
+    background: transparent !important;
+    color: #4a5568 !important;
+  }
+
+  #acejuvi-site-header nav button:hover,
+  #acejuvi-site-header nav a:hover,
+  #acejuvi-site-header nav a[aria-current="page"],
+  #acejuvi-site-header a.is-section-active {
+    background: transparent !important;
+    color: #00236f !important;
+  }
+
+  body button,
+  body a[role="button"],
+  body .hero-dot,
+  body .about-dot {
+    outline: 0 !important;
+    border-color: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  body button:hover,
+  body button:focus,
+  body button:active,
+  body a[role="button"]:hover,
+  body a[role="button"]:focus,
+  body a[role="button"]:active,
+  body .hero-dot:hover,
+  body .hero-dot:focus,
+  body .hero-dot:active,
+  body .about-dot:hover,
+  body .about-dot:focus,
+  body .about-dot:active {
+    outline: 0 !important;
+    border-color: transparent !important;
+  }
+
+  body button[aria-label*="foto"],
+  body button[aria-label*="Foto"],
+  body button[aria-label*="banner"],
+  body button[aria-label*="Banner"],
+  body button[aria-label*="Slide"],
+  body button[aria-label*="slide"] {
+    border: 0 !important;
+    outline: 0 !important;
+    color: #00236f !important;
+  }
+
+  body button[aria-label*="foto"]:hover,
+  body button[aria-label*="foto"]:focus,
+  body button[aria-label*="foto"]:active,
+  body button[aria-label*="Foto"]:hover,
+  body button[aria-label*="Foto"]:focus,
+  body button[aria-label*="Foto"]:active,
+  body button[aria-label*="banner"]:hover,
+  body button[aria-label*="banner"]:focus,
+  body button[aria-label*="banner"]:active,
+  body button[aria-label*="Banner"]:hover,
+  body button[aria-label*="Banner"]:focus,
+  body button[aria-label*="Banner"]:active,
+  body button[aria-label*="Slide"]:hover,
+  body button[aria-label*="Slide"]:focus,
+  body button[aria-label*="Slide"]:active,
+  body button[aria-label*="slide"]:hover,
+  body button[aria-label*="slide"]:focus,
+  body button[aria-label*="slide"]:active {
+    background: #e6eeff !important;
+    color: #00236f !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: 0 10px 24px rgba(30, 58, 138, 0.12) !important;
+  }
+
+  button[data-inscricoes-open],
+        button[data-inscricoes-open]:hover,
+        button[data-inscricoes-open]:focus,
+        button[data-inscricoes-open]:active {
+    background: #00236f !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    outline: 0 !important;
+    box-shadow: 0 8px 18px rgba(0, 35, 111, 0.18) !important;
+  }
+
+
+  button[data-inscricoes-open] {
+      min-height: 32px !important;
+      padding: 0.45rem 1rem !important;
+      gap: 0.4rem !important;
+      font-size: 0.78rem !important;
+      line-height: 1.1 !important;
+      white-space: nowrap !important;
+  }
+  button[data-inscricoes-open] .material-symbols-outlined {
+      font-size: 15px !important;
+  }
+
+  #pix-interactive-box .pix-amt-btn,
+  #pix-interactive-box a,
+  #pix-interactive-box button,
+  .hero-dot,
+  .about-dot {
+    border-color: transparent !important;
+    outline: 0 !important;
+  }
+
+  #pix-interactive-box .pix-amt-btn.bg-secondary,
+  #pix-interactive-box .pix-amt-btn.bg-secondary:hover,
+  #pix-interactive-box .pix-amt-btn.bg-secondary:focus,
+  #pix-interactive-box .pix-amt-btn.bg-secondary:active {
+    background: #0051d5 !important;
+    color: #ffffff !important;
+  }
+  @media (max-width: 640px) {
+    #pix-interactive-box {
+      border-radius: 1.75rem !important;
+      gap: 0.875rem !important;
+      padding: 1.25rem !important;
+    }
+
+    #pix-interactive-box > div:first-child {
+      align-items: flex-start !important;
+      gap: 0.75rem !important;
+    }
+
+    #pix-interactive-box > div:first-child .font-headline-sm {
+      font-size: 1.45rem !important;
+      line-height: 1.15 !important;
+    }
+
+    #pix-interactive-box > div:first-child > span:last-child {
+      line-height: 1.1 !important;
+      text-align: center !important;
+      white-space: normal !important;
+    }
+
+    #pix-interactive-box .grid.grid-cols-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #pix-interactive-box .pix-amt-btn {
+      min-height: 44px !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      white-space: nowrap !important;
+    }
+
+    #pix-interactive-box #pix-key-val {
+      overflow: visible !important;
+      text-overflow: clip !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+    }
+
+    #pix-interactive-box .bg-surface-container-lowest.p-space-md,
+    #pix-interactive-box .bg-surface-container-low.p-space-md {
+      padding: 1rem !important;
+    }
+
+    #pix-interactive-box .bg-surface-container-lowest.p-space-md > div:first-child,
+    #pix-interactive-box .bg-surface-container-low.p-space-md > div:first-child {
+      align-items: flex-start !important;
+      flex-direction: column !important;
+      gap: 0.25rem !important;
+    }
+  }
+  .zum-gallery-hint {
+    color: #444651;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
+  .zum-gallery-modal {
+    align-items: center;
+    background: rgba(13, 28, 46, 0.68);
+    backdrop-filter: blur(10px);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    padding: 1rem;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .zum-gallery-modal.is-open {
+    display: flex;
+    animation: zum-modal-fade 180ms ease both;
+  }
+
+  .zum-gallery-modal__card {
+    background: #ffffff;
+    border: 1px solid rgba(197, 197, 211, 0.65);
+    border-radius: 1.75rem;
+    box-shadow: 0 28px 70px -24px rgba(0, 35, 111, 0.42);
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    max-height: min(86vh, 760px);
+    max-width: 980px;
+    overflow: hidden;
+    position: relative;
+    width: min(100%, 980px);
+  }
+
+  .zum-gallery-modal__image {
+    background: #e6eeff;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .zum-gallery-modal__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .zum-gallery-modal__eyebrow {
+    align-items: center;
+    background: #e6eeff;
+    border-radius: 9999px;
+    color: #00236f;
+    display: inline-flex;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+    padding: 0.35rem 0.75rem;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  .zum-gallery-modal__title {
+    color: #00236f;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.35rem);
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.12;
+    margin: 0;
+  }
+
+  .zum-gallery-modal__text {
+    color: #444651;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .zum-gallery-modal__close {
+    align-items: center;
+    background: #eff4ff !important;
+    border: 0 !important;
+    border-radius: 9999px;
+    color: #00236f !important;
+    cursor: pointer;
+    display: inline-flex;
+    height: 44px;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 44px;
+    z-index: 2;
+  }
+
+  body.zum-modal-open {
+    overflow: hidden;
+  }
+
+  @keyframes zum-modal-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @media (max-width: 767px) {
+    .zum-gallery-modal {
+      padding: 0.75rem;
+    }
+
+    .zum-gallery-modal__card {
+      border-radius: 1.25rem;
+      grid-template-columns: 1fr;
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+
+    .zum-gallery-modal__image {
+      aspect-ratio: 4 / 3;
+      min-height: 0;
+    }
+
+    .zum-gallery-modal__content {
+      padding: 1.25rem;
+    }
+
+    .zum-gallery-modal__text {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }</style>
+
+<style id="acejuvi-polish-1065">
+  body { isolation: isolate; } main, footer { position: relative; z-index: 1; } header { position: relative; z-index: 50; } body::before, body::after { display: none !important; }
+          section[data-acejuvi-youth-decorated] { position: relative; overflow: hidden; isolation: isolate; }
+          .acejuvi-youth-bg { display: none !important; }
+          .acejuvi-youth-section-bg { --mx: 0; --my: 0; position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; opacity: .38; }
+          .acejuvi-youth-float { position: absolute; left: var(--x); top: var(--y); width: var(--s, 62px); height: var(--s, 62px); border-radius: var(--br, 999px); display: flex; align-items: center; justify-content: center; color: var(--fg); background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.96) 0 18%, rgba(255,255,255,.54) 19% 34%, var(--bg) 70%, rgba(255,255,255,.16) 100%); border: 1px solid rgba(255,255,255,.72); box-shadow: 0 20px 44px -30px rgba(0,35,111,.45), inset 0 1px 7px rgba(255,255,255,.68); transform: translate3d(calc(var(--mx) * var(--d) * 1px), calc(var(--my) * var(--d) * 1px), 0) rotate(var(--r)) scale(calc(1 + (var(--active, 0) * .08))); animation: acejuvi-youth-bubble 11s ease-in-out infinite; animation-delay: var(--delay); transition: transform 160ms ease-out, filter 160ms ease-out; will-change: transform; backdrop-filter: blur(2px); }
+          .acejuvi-youth-float::before { content: ""; position: absolute; width: 28%; height: 28%; left: 18%; top: 16%; border-radius: 999px; background: rgba(255,255,255,.72); filter: blur(.2px); }
+          .acejuvi-youth-float::after { content: ""; position: absolute; inset: 3px; border-radius: inherit; border: 1px solid rgba(255,255,255,.44); }
+          .acejuvi-youth-float .material-symbols-outlined { position: relative; z-index: 1; font-size: calc(var(--s, 62px) * .42); font-variation-settings: "FILL" 0, "wght" 500; filter: drop-shadow(0 1px 0 rgba(255,255,255,.5)); }
+          .acejuvi-youth-blue { --bg: rgba(49,107,243,.20); --fg: #0051d5; }
+          .acejuvi-youth-green { --bg: rgba(0,151,91,.18); --fg: #005a38; }
+          .acejuvi-youth-gold { --bg: rgba(255,178,0,.22); --fg: #9a6200; }
+          .acejuvi-youth-red { --bg: rgba(255,96,96,.16); --fg: #b91c1c; }
+          .acejuvi-youth-small { --s: 46px; }
+          .acejuvi-youth-wide { --s: 72px; }
+          @keyframes acejuvi-youth-bubble { 0%,100% { margin-top: 0; margin-left: 0; } 35% { margin-top: -13px; margin-left: 8px; } 70% { margin-top: 8px; margin-left: -7px; } }
+          @media (max-width: 767px) { .acejuvi-youth-section-bg { opacity: .20; } .acejuvi-youth-float { --s: 42px; } .acejuvi-youth-float:nth-child(n+3) { display: none; } }
+
+
+  .acejuvi-social-icon { box-shadow: 0 8px 20px -14px rgba(30,58,138,.5); }
+  .acejuvi-social-icon:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 16px 28px -18px rgba(30,58,138,.65); }
+  .acejuvi-social-youtube { color: #ff0033 !important; }
+  .acejuvi-social-instagram { color: #e1306c !important; }
+  .acejuvi-social-whatsapp { color: #25D366 !important; }
+
+  #acejuvi-site-header > .animate-subtle-pulse p::first-letter { font-size: 0; }
+  #acejuvi-site-header > .animate-subtle-pulse .material-symbols-outlined:first-child { color: #69f0ae !important; animation: acejuvi-single-blink 1.15s ease-in-out infinite; }
+  a[href*="wa.me"] svg, a[href*="wa.me"] .material-symbols-outlined { color: #25D366 !important; }
+  #acejuvi-em-numeros { min-height: 340px; display: flex; align-items: center; }
+  #acejuvi-em-numeros > .flex { width: 100%; }
+  #acejuvi-em-numeros .grid.grid-cols-2 { align-items: start; row-gap: 1.35rem !important; }
+  #acejuvi-em-numeros .grid.grid-cols-2 > div { min-height: 96px; justify-content: flex-start; }
+  #acejuvi-em-numeros .grid.grid-cols-2 > div > span:first-child { min-height: 42px; display: inline-flex; align-items: flex-end; justify-content: center; }
+  #acejuvi-em-numeros .grid.grid-cols-2 > div > span:last-child { min-height: 32px; align-items: center; justify-content: center; line-height: 1.05; }
+  
+  #acejuvi-em-numeros .grid.grid-cols-2 > div:last-child > span:first-child { font-size: 25px !important; letter-spacing: 0 !important; }
+  @media (min-width: 1280px) { #acejuvi-em-numeros [data-acejuvi-counter-card]:last-child > span:first-child { font-size: clamp(1.28rem, 1.2vw, 1.58rem) !important; } }
+  .acejuvi-values-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .85rem; max-width: 1160px; margin: 0 auto; }
+  .acejuvi-value-item { display: grid; grid-template-columns: 38px 1fr; gap: .7rem; align-items: start; padding: .85rem .9rem; border-radius: 18px; background: rgba(255,255,255,.72); border: 1px solid rgba(126,145,181,.18); box-shadow: 0 10px 26px -24px rgba(30,58,138,.35); transition: transform 260ms ease, box-shadow 260ms ease, background 260ms ease; }
+  .acejuvi-value-item:hover { transform: translateY(-4px); background: rgba(255,255,255,.94); box-shadow: 0 18px 34px -24px rgba(30,58,138,.5); }
+  .acejuvi-value-icon { width: 38px; height: 38px; border-radius: 14px; background: #e6eeff; color: #00236f; display: flex; align-items: center; justify-content: center; }
+  .acejuvi-value-icon.is-green { background: #005a38; color: #66ffb3; }
+  .acejuvi-value-icon.is-blue { background: #0051d5; color: #fff; }
+  .acejuvi-floating-card { animation: acejuvi-card-float 7s ease-in-out infinite; will-change: transform; }
+  .acejuvi-floating-card:nth-child(2n) { animation-delay: -1.4s; }
+  .acejuvi-floating-card:nth-child(3n) { animation-delay: -2.7s; }
+  .acejuvi-floating-card:hover { transform: translateY(-10px) rotate(.25deg) !important; box-shadow: 0 22px 42px -28px rgba(30,58,138,.55) !important; }
+  .acejuvi-hero-motion { animation: acejuvi-photo-drift 12s ease-in-out infinite; transform-origin: center; }
+  .acejuvi-hero-motion-wrap { animation: acejuvi-photo-frame 9s ease-in-out infinite; }
+  .acejuvi-process-timeline .acejuvi-step-card { position: relative; min-height: 260px; transition: transform 260ms ease, box-shadow 260ms ease; }
+  .acejuvi-process-timeline .acejuvi-step-card:hover { transform: translateY(-6px); box-shadow: 0 20px 34px -28px rgba(30,58,138,.55); }
+  @media (min-width: 1024px) { .acejuvi-process-timeline .acejuvi-step-card:not(:last-child)::after { content: ""; position: absolute; top: 50%; right: -1.4rem; width: 2rem; height: 2rem; transform: translateY(-50%); background: linear-gradient(135deg, transparent 45%, #8fb4ff 46% 55%, transparent 56%); opacity: .85; } }
+  @media (max-width: 1023px) { .acejuvi-values-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 767px) { .acejuvi-values-list { grid-template-columns: 1fr; } #acejuvi-em-numeros { min-height: auto; } }
+  @keyframes acejuvi-single-blink { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .32; transform: scale(1.16); } }
+  @keyframes acejuvi-card-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  @keyframes acejuvi-photo-drift { 0%,100% { transform: scale(1.02) translate3d(0,0,0); } 50% { transform: scale(1.07) translate3d(-8px,-5px,0); } }
+  @keyframes acejuvi-photo-frame { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  
+   .acejuvi-entry-ready { opacity: 0; transform: translateY(28px); transition: opacity 520ms ease, transform 520ms ease; } .acejuvi-entry-visible { opacity: 1; transform: translateY(0); } #acejuvi-final-cta { min-height: 0 !important; height: auto !important; max-height: none !important; display: block !important; padding-top: 42px !important; padding-bottom: 42px !important; align-items: initial !important; justify-content: initial !important; } #acejuvi-final-cta > .max-w-container-max { min-height: 0 !important; } @media (max-width: 767px) { #acejuvi-final-cta { padding-top: 32px !important; padding-bottom: 32px !important; } .acejuvi-entry-ready { transform: translateY(18px); } } @media (prefers-reduced-motion: reduce) { .acejuvi-youth-section-bg, body::before, body::after, .acejuvi-floating-card, .acejuvi-hero-motion, .acejuvi-hero-motion-wrap, #acejuvi-site-header > .animate-subtle-pulse .material-symbols-outlined:first-child { animation: none !important; } }
+</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header id="acejuvi-site-header" class="fixed top-0 left-0 right-0 z-50 flex flex-col shadow-[0_4px_20px_-2px_rgba(30,58,138,0.08)]"><div class="w-full bg-primary-container text-on-primary py-space-2xs px-space-md animate-subtle-pulse"><div class="max-w-container-max mx-auto flex items-center justify-between gap-space-sm flex-wrap md:flex-nowrap"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed">warning</span><p class="font-label-sm text-label-sm font-bold tracking-wide uppercase">INSCRIÇÕES ABERTAS E PRESENCIAIS! <span class="font-body-sm text-body-sm font-normal normal-case opacity-90 hidden sm:inline">Compareça à ACEJUVI com os documentos necessários.</span></p></div><a class="inline-flex items-center gap-space-2xs bg-secondary-container text-on-secondary hover:bg-secondary font-label-sm text-label-sm px-space-sm py-1 rounded-full transition-all flex-shrink-0" href="https://wa.me/5564992846885?text=Falar%20Conosco" target="_blank" rel="noopener noreferrer"><span class="">Falar Conosco</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div><div class="h-20 bg-surface-container-lowest/95 backdrop-blur-xl"><div class="max-w-container-max h-full mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><a class="flex items-center gap-space-sm group" data-path="inicio" href="./landing.html?ver=1.0.71#hero-slider-section"><img loading="eager" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWpLGlEnqC2w7IITGp_mqUiV9J_nMzvyV1pmT45iRqLDewe5EqRMTG80pe27CcPMiGar6-HaMT5NCWAbe0ufQFLz5Sod72ZHch6YSjJRZrctRsA-kI0lMR4FF7zWo6KfUIpD8onmG7NlDo-dQnLLnbwiU4VS3LYCKpae4RPDWb_JINhqjeJA-f2spBNTQTZZ7BW4uCr-3KRowvNl_urAdGXG-4XeMFHGpz9tVxt4LmrVZQhYf0a9QPqrXc2EhZt4RqaQ" alt="ACEJUVI - Associação Centro Juvenil Pela Vida" class="h-12 w-auto object-contain rounded-2xl shadow-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none group-hover:text-secondary transition-colors">ACEJUVI</span><span class="font-label-sm text-[9px] text-on-surface-variant font-medium tracking-widest uppercase leading-tight opacity-80">CENTRO JUVENIL PELA VIDA</span></div></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-bold"><a class="transition-colors py-2 text-on-surface-variant hover:text-primary" data-path="inicio" href="./landing.html?ver=1.0.71#hero-slider-section">Início</a><div class="relative group"><button class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-2 flex items-center gap-1 focus:outline-none" type="button">Sobre a ACEJUVI<span class="material-symbols-outlined text-[18px] text-outline group-hover:rotate-180 transition-transform duration-200">expand_more</span></button><div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block min-w-[240px] z-50"><div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-[0_12px_28px_-4px_rgba(30,58,138,0.12)] flex flex-col gap-1"><a class="font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="quem-somos" href="./quem-somos.html?ver=1.0.71">Quem Somos</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="portfolio-institucional" href="./quem-somos.html?ver=1.0.71#projeto-em-acao">Portfólio</a></div></div></div><div class="relative group"><button class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-2 flex items-center gap-1 focus:outline-none" type="button">Projetos<span class="material-symbols-outlined text-[18px] text-outline group-hover:rotate-180 transition-transform duration-200">expand_more</span></button><div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block min-w-[260px] z-50"><div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-[0_12px_28px_-4px_rgba(30,58,138,0.12)] flex flex-col gap-1"><a aria-current="page" class="font-body-sm text-body-sm bg-surface-container text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="projeto-zumzumzum" href="./projeto-zumzumzum.html?ver=1.0.71">Projeto ZumZumZum</a></div></div></div><div class="relative group"><button class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-2 flex items-center gap-1 focus:outline-none" type="button">Seja Parceiro<span class="material-symbols-outlined text-[18px] text-outline group-hover:rotate-180 transition-transform duration-200">expand_more</span></button><div class="absolute left-0 top-full pt-2 hidden group-hover:block group-focus-within:block min-w-[220px] z-50"><div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-[0_12px_28px_-4px_rgba(30,58,138,0.12)] flex flex-col gap-1"><a class="font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="seja-voluntario" href="./landing.html?ver=1.0.71#como-voce-pode-ajudar">Voluntário</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="seja-associado" href="./landing.html?ver=1.0.71#como-voce-pode-ajudar">Associado</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="seja-patrocinador" href="./landing.html?ver=1.0.71#como-voce-pode-ajudar">Patrocinador</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:bg-surface-container hover:text-primary px-space-sm py-2 rounded-lg transition-colors" data-path="seja-benfeitor" href="./landing.html?ver=1.0.71#como-voce-pode-ajudar">Benfeitor</a></div></div></div><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-2" data-path="contato" href="https://wa.me/5564992846885?text=Falar%20Conosco" target="_blank" rel="noopener noreferrer">Contato</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><a class="inline-flex items-center gap-space-xs bg-tertiary-container hover:bg-tertiary text-tertiary-fixed font-label-lg text-label-lg px-space-md py-2.5 rounded-full shadow-[0_4px_12px_rgba(0,49,31,0.25)] transition-all transform hover:-translate-y-0.5" data-path="doacoes-pix" href="./landing.html?ver=1.0.71#pix-interactive-box"><span class="material-symbols-outlined text-[20px] text-tertiary-fixed animate-heart">favorite</span><span class="">QUERO DOAR</span></a></div></div></div></header><main class="w-full pt-32 lg:pt-36 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="w-full py-space-2xl lg:py-space-3xl relative overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Content -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="">Espetáculo Cênico-Musical &amp; Oficinas Periféricas</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight">
+            Projeto Zum Zum Zum: <span class="text-secondary">A Saga do Mestre Besouro</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Resgate histórico, ancestralidade, música, dança afro-brasileira e teatro comunitário transformando a vida de dezenas de jovens em Caldas Novas. Uma imersão formativa que capacita novos talentos através da arte popular, percussão sinfônica e dramaturgia de resistência.
+          </p>
+<!-- Metric Cards in Bento Row -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm mt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-1">
+<span class="font-display-hero text-headline-md text-primary font-bold">+80</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Jovens &amp; Crianças Atendidos</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-1">
+<span class="font-display-hero text-headline-md text-tertiary-container font-bold">100%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gratuito à Comunidade</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-1">
+<span class="font-display-hero text-headline-md text-secondary font-bold">3 Áreas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dança, Música e Teatro</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[28px]">theater_comedy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Culminância com Espetáculo Aberto</span>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-md hover:shadow-lg" href="#documentos-drive">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+              Acessar Documentos e Prestação de Contas
+              <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl bg-surface-container hover:bg-surface-variant text-primary font-label-lg text-label-lg transition-colors" href="#galeria-oficinas">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+              Ver Galeria de Oficinas
+            </a>
+</div>
+</div>
+<!-- Right Visual Showcase -->
+<div class="lg:col-span-5 relative">
+<div class="acejuvi-hero-motion-wrap relative rounded-3xl overflow-hidden bg-primary-container p-2 shadow-xl">
+<div class="rounded-2xl overflow-hidden relative aspect-[4/3] bg-primary">
+<img loading="lazy" decoding="async" alt="Ensaio geral no salão da ACEJUVI" class="acejuvi-hero-motion w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1UKb0x7CWa0gdknFCm1VHMd3awpiWmMmb11QwJdomXWDdvxzChSx1YmNcQd1SoZkVEhp1ohTpKoIh6FumKb3gi1xqcoE1dgbsPRsB4VTzNC39y9W8BBxBYCkgrsQSSiodkLd4wl20ZLgKvSANpNbgd-_zrYDkQ-SLR_W4Xp0vtqZXwUH67JjSr5QSZqHII_542-ZoZ1X52jZA14QXOlUNQLfuFOyNbuVMSC1OuYQc0poqVZSHIQpm8wyzWdccE-NYTg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-75"></div>
+<div class="absolute bottom-4 left-4 right-4 text-on-primary"><div class="max-w-[92%]">
+<span class="inline-block px-2 py-0.5 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm mb-1">
+                    Cultura em Ação
+                  </span>
+<p class="font-title-md text-title-md font-bold text-on-primary">A Saga do Mestre Besouro</p>
+<p class="font-label-sm text-label-sm text-surface-container-high">ACEJUVI • Caldas Novas / GO</p>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Floating Badge -->
+<div class="absolute -bottom-5 -left-4 bg-surface-container-lowest rounded-2xl p-space-sm shadow-xl flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">sports_martial_arts</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Teatro &amp; Dança Popular</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ancestralidade &amp; Capoeira</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Summary & Project Pillars -->
+<section class="w-full py-space-3xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="text-center max-w-2xl mx-auto mb-space-2xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Pilares Pedagógicos</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Formação Artística Interdisciplinar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Metodologia viva orientada por educadores populares, conectando história afro-brasileira, disciplina e sensibilidade estética.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Pillar 1: Teatro -->
+<div class="acejuvi-floating-card bg-surface-container-lowest rounded-3xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[30px]">theater_comedy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Oficinas de Teatro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Expressão corporal, oratória, encenação dramática e construção coletiva dos personagens. Os educandos pesquisam e personificam a trajetória e o mito libertário de Besouro Mangangá.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">Roteiro Dramatúrgico Próprio</span>
+</div>
+</div>
+<!-- Pillar 2: Música -->
+<div class="acejuvi-floating-card bg-surface-container-lowest rounded-3xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[30px]">music_note</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Oficinas de Música &amp; Percussão</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Prática de violino, percussão afro-brasileira, atabaques, bateria e arranjos sinfônicos. Jovens aprendem leitura de partituras e sonoridades que dão vida à trilha sonora original.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2 text-secondary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="">Cordas, Ritmo &amp; Afinação Coletiva</span>
+</div>
+</div>
+<!-- Pillar 3: Dança & Capoeira -->
+<div class="acejuvi-floating-card bg-surface-container-lowest rounded-3xl p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[30px]">sports_martial_arts</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Oficinas de Dança &amp; Capoeira</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Vivências corporais de dança contemporânea e popular, movimentos acrobáticos tradicionais da capoeira regional e de angola, estimulando coordenação, respeito e presença cênica.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center gap-2 text-tertiary-container font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+<span class="">Coordenação, Ritmo e Ancestralidade</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Timeline / Diário de Bordo -->
+<section class="acejuvi-process-timeline w-full py-space-3xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Ciclo de Execução</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Diário de Bordo e Linha do Tempo</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Todas as fases foram registradas pedagogicamente com frequência, diários docentes e conformidade com as diretrizes do edital.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Step 1 -->
+<div class="acejuvi-step-card bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">1</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Fase Inicial</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Processo Seletivo</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Divulgação comunitária, chamada pública em escolas locais e matrícula 100% gratuita.</p>
+</div>
+<!-- Step 2 -->
+<div class="acejuvi-step-card bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">2</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Formação Técnica</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Aulas Semanais</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Encontros modulares de técnica vocal, percussão, instrumentos de corda e dramaturgia.</p>
+</div>
+<!-- Step 3 -->
+<div class="acejuvi-step-card bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">3</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Conexão Cênica</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Ensaios Gerais</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Passagem integrada no tatame e palco da ACEJUVI unindo banda, coro e elenco de dança.</p>
+</div>
+<!-- Step 4 -->
+<div class="acejuvi-step-card bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold">4</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold">Marco Cultural (23/08)</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Culminância</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Grande espetáculo cênico para familiares, educadores e a comunidade de Caldas Novas.</p>
+</div>
+<!-- Step 5 -->
+<div class="acejuvi-step-card bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col gap-space-sm relative">
+<div class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">5</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Diplomação</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Certificados</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reconhecimento de carga horária e diplomação formal dos alunos para o currículo sociocultural.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Gallery with Real Assets -->
+<section class="w-full py-space-3xl bg-surface-container-low overflow-hidden select-none" id="galeria-oficinas"><div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop"><div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl text-center md:text-left"><div><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Galeria Viva</span><h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Registros das Oficinas e Ensaios</h2></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Momentos autênticos dos jovens da ACEJUVI vivenciando os sons, movimentos e ensinamentos de Mestre Besouro.</p></div><div class="relative w-full max-w-5xl mx-auto flex items-center justify-center py-6 min-h-[480px] md:min-h-[540px]"><button id="coverflow-prev" aria-label="Slide anterior" class="absolute left-2 md:left-6 z-30 w-11 h-11 md:w-12 md:h-12 rounded-full bg-surface-container-lowest text-primary shadow-lg border border-outline-variant/40 flex items-center justify-center hover:scale-110 hover:bg-surface-container-high transition-all cursor-pointer"><span class="material-symbols-outlined text-[24px] text-amber-700">chevron_left</span></button><div id="coverflow-track" class="relative w-full h-[400px] md:h-[480px] flex items-center justify-center overflow-visible"><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="0"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8FRqBFENhHxIj_gfTXEIQVoIplakDmir_IcMMW2ybXKvfBCrmSOQMTtfgSSzXrr4kdprWrrgO0IdgXAykcLbbuUB7UdY3GP8rPjduuDn_oFsk7n5OtDW3qKiahb4QFHoftUkaHdRDcidKCteHr39vFscjfn7UgJ-mUFNXgAPcixV_jZRsHv0TIt1lUuo-NvdbBwcEMJMKZl0mYME1dG1QSoWYEbx5qyLIGOitBM25F1fI0yA7qzRsst-VOFcdBdcRJQ" alt="Oficina de Capoeira e Dança" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Capoeira &amp; Dança</span></div></div><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="1"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkjFiiWidYyIy0QeM3OdCKV-OvrEB7KlQcrxgFCPv5O7V57c498K70z7uSrt_P3k8BDj8NHpWsExzchjBK_wxiRazYw9tle0FQY89cmwBcDt5Dn6QUhca8fw_6iaHCGENbpp1f2rWVZEyRizS9SC5T4gwPT1DmM5UQH9vApmDrY_hp9sdrSgpWMjIIp-nRM0KqEN2xMbgfXGJCkdoh3lLoowHM7sDdf53vjSuqEOz0KZyekng13Kp1tZ4w4DkcAL7U1A" alt="Orquestra de Cordas com Violinos e Violoncelo" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Cordas &amp; Violoncelo</span></div></div><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="2"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLgKpYvEVwSV-kRv-SWlfTr1gjbYNjS2jmII05lc3-aJxhpjZ2KY1RLzwvMMeWHGxwE4_u8mC19b-CriG9SrUSeYSCdWp8I6qawWY01PKuNVm8z8XE5zXfqbiOrrnRytFY7DoOXZdA3GJJTP0OZfET63QaSxrwnT9IrNyhGF-ThW08pysKjUBgqONzAKWOxP3-aspQapWOfTWwVIYKogOZ5oddTzfF8JMFGnEY09YXmTuj3SJcs9jRE-FRQeUSzwuYQ" alt="Close-up dos alunos tocando violino" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Técnica de Violino</span></div></div><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="3"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ebE9mvjrYBs59o2OxJIB-2zG2GZKKvvQXGVx5NG3a3cqw63xsXUjqOqScawl-qTCiLiT4NKpaqb2VRTj2a8SWRU3XL3MVS1EPeumGx1jQG2TK1oBu-Xt5pUJcZrayswLIwJv78EH6r16gJee3ny10A4VYbIVmNl4W4UoYJR-TdwYbcVk0EOTRkMHYj1cWGCPKYykJUqj5tmg1Bb3qLdXpl6Seh7YQKbhackHxNGsVe_7nhcuaKxZ0ezKWmI_FgfUOA" alt="Roda de Ensaio com Bateria e Percussão" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Percussão &amp; Bateria</span></div></div><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="4"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa_zTGgyyQwu3nqPTxOWquesQH6wumAF3-2SX3S2yJi_4914ps_lQ3SzCr9aRwP10WNPnSJUNxqzSat_KO_O6TaaIPS36M8Xk8xb1RwQKHMyl2ZiSYsWxB2eGF9WT9qY7OEqEMU6HiNFPpkzN4sj9qRmPeOXYX8B3Un05WG77ZXJ8OHnJRzlMgF72RuVy4aMXsem7Grq-jMqxxe5T3qpmQSKFLzzwuqKrx05cxRe11zy-JGIg1Lc8P0BUFtKgJj-11Kg" alt="Aula de Dança e Expressão Corporal no Tatame" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Dança no Tatame</span></div></div><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="5"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcSM26dpYPjXdFIVekOQ7cDkeLCz4BONraBgQCOVSPJx6zzoPJwoTrGiM13aBUoxOVRDWZclJDAhFn7Z_vsjugwkYYVY8G-3L8fIZU4JJM3ZdRMjz6Jwxi27HWCOQ1lJY82vgCJwoEucq7gHY_heg_ynlV9rK6SXWkmORi_JapCXBhsSv8zU_gZYA4H194A2zh8_FyL28wFUnQhJpmgayvwY79Js0OAkUN-275pUZl3-Kd29JFxjGvXXb2oCJDouMxfQ" alt="Alongamento e Equilíbrio Corporal" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Equilíbrio &amp; Foco</span></div></div><div class="coverflow-item absolute rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 ease-out cursor-pointer w-[270px] h-[360px] md:w-[350px] md:h-[450px] bg-surface-container-lowest border border-surface-container-high" data-index="6"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJiiYDauTR5OdtsD6SeGtTEiwnJ5GqkIWnZZJdmex9BRdfOcRzgEjK1hmA-wEIAoep-imxbyWAe-05lhVAF0Q-sw3qlvG9asj2v6Ue0zheWaR6Qx_s7D928qqPj0tcJmr6xP5gLCa0Ng-RYbm6U1dSzj3__IhWIsejmgh7rzH_PJpci_xbnOsbaXDTH8S08VvI1OZd-DgVGlTowUVlSGaWTWu0wNQ0cNVMCgQQmK93AyA8Dq-FIzCEx-lPyWGNwPKMLA" alt="Encenação Teatral e Adereços" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-4 text-on-primary"><span class="font-label-sm text-label-sm font-bold bg-primary/60 backdrop-blur-md px-3 py-1 rounded-full">Encenação &amp; Teatro</span></div></div></div><button id="coverflow-next" aria-label="Próximo slide" class="absolute right-2 md:right-6 z-30 w-11 h-11 md:w-12 md:h-12 rounded-full bg-surface-container-lowest text-primary shadow-lg border border-outline-variant/40 flex items-center justify-center hover:scale-110 hover:bg-surface-container-high transition-all cursor-pointer"><span class="material-symbols-outlined text-[24px] text-amber-700">chevron_right</span></button></div><div class="flex items-center justify-center gap-2 mt-4" id="coverflow-dots"><span class="dot w-2.5 h-2.5 rounded-full bg-primary cursor-pointer transition-all duration-300" data-dot="0"></span><span class="dot w-2.5 h-2.5 rounded-full bg-outline-variant cursor-pointer transition-all duration-300" data-dot="1"></span><span class="dot w-2.5 h-2.5 rounded-full bg-outline-variant cursor-pointer transition-all duration-300" data-dot="2"></span><span class="dot w-2.5 h-2.5 rounded-full bg-outline-variant cursor-pointer transition-all duration-300" data-dot="3"></span><span class="dot w-2.5 h-2.5 rounded-full bg-outline-variant cursor-pointer transition-all duration-300" data-dot="4"></span><span class="dot w-2.5 h-2.5 rounded-full bg-outline-variant cursor-pointer transition-all duration-300" data-dot="5"></span><span class="dot w-2.5 h-2.5 rounded-full bg-outline-variant cursor-pointer transition-all duration-300" data-dot="6"></span></div><p class="zum-gallery-hint">Clique na imagem em destaque para conhecer melhor esse momento.</p></div></section>
+<!-- Google Drive Document Repository Hub -->
+<section class="w-full py-space-3xl bg-surface" id="documentos-drive">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg mb-space-2xl pb-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm w-fit">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span class="">Documentos oficiais em PDF</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Transparência &amp; Documentos Oficiais</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Consulte os documentos oficiais da ACEJUVI diretamente pelo site. Ao clicar em visualizar, o PDF abre em uma nova aba.</p>
+</div>
+
+</div>
+<!-- Documentos oficiais em PDF -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-variant flex items-center justify-center text-primary"><span class="material-symbols-outlined">description</span></div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">PDF / Estatuto</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">ESTATUTO VIGENTE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Documento institucional vigente da Associação Centro Juvenil Pela Vida.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF</span>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-1" href="./docs/estatuto-vigente.pdf" rel="noopener noreferrer" target="_blank">Visualizar <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-variant flex items-center justify-center text-primary"><span class="material-symbols-outlined">badge</span></div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">PDF / CNPJ</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">CNPJ ACEJUVI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comprovante cadastral da Associação Centro Juvenil Pela Vida.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF</span>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-1" href="./docs/cnpj-acejuvi.pdf" rel="noopener noreferrer" target="_blank">Visualizar <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-variant flex items-center justify-center text-primary"><span class="material-symbols-outlined">history_edu</span></div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">PDF / Fundação</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">ATA GERAL DE FUNDAÇÃO</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Registro de fundação e formalização histórica da instituição.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF</span>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-1" href="./docs/ata-geral-fundacao.pdf" rel="noopener noreferrer" target="_blank">Visualizar <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-variant flex items-center justify-center text-primary"><span class="material-symbols-outlined">groups</span></div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">PDF / Diretoria</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">ATA DE ELEIÇÃO E POSSE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ata de eleição e posse da 4ª Diretoria da ACEJUVI.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF</span>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-1" href="./docs/ata-eleicao-posse-4-diretoria.pdf" rel="noopener noreferrer" target="_blank">Visualizar <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed"><span class="material-symbols-outlined">handshake</span></div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">PDF / Fomento</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">TERMO DE FOMENTO FUNARTE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Termo de Fomento relacionado ao projeto e à parceria institucional.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF</span>
+<a class="font-label-sm text-label-sm text-tertiary-container hover:underline font-semibold flex items-center gap-1" href="./docs/termo-fomento-funarte.pdf" rel="noopener noreferrer" target="_blank">Visualizar <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined">verified</span></div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-primary font-label-sm text-label-sm font-bold">PDF / Funarte</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">CHANCELA DE MARCAS FUNARTE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Documento de chancela de marcas Funarte horizontal 2023.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF</span>
+<a class="font-label-sm text-label-sm text-secondary hover:text-primary font-semibold flex items-center gap-1" href="./docs/chancela-marcas-funarte-2023.pdf" rel="noopener noreferrer" target="_blank">Visualizar <span class="material-symbols-outlined text-[14px]">open_in_new</span></a>
+</div>
+</div>
+</div>
+</div>
+</section><section class="w-full py-space-3xl bg-surface-container-low" id="divulgacao-institucional">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-2xl pb-space-sm">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-variant text-primary font-label-sm text-label-sm w-fit">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">visibility</span>
+<span class="">Transparência Física &amp; Comunitária</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Divulgação Documental na Instituição</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Transparência ativa e conformidade comunitária com prestação de contas, cartazes oficiais do Ministério da Cultura / Lei Paulo Gustavo, banners informativos e diários afixados no mural e na entrada da sede da ACEJUVI.
+        </p>
+</div>
+
+</div>
+<!-- Key Transparency Indicators Banner -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-variant flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-md font-bold text-primary">100% Afixados</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Editais, termos de fomento e relatórios visíveis</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">door_open</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-md font-bold text-primary">Acesso Livre</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Consulta pública para pais, alunos e comunidade</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-title-md font-bold text-primary">Lei nº 13.019/2014</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Publicidade integral e conformidade com o MROSC</span>
+</div>
+</div>
+</div>
+<!-- Physical Presence Photo Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg"><div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden bg-primary">
+<img loading="lazy" decoding="async" alt="Recepção e porta de vidro com mural da ACEJUVI à esquerda e visão do pátio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGUAh6-Z64EHH5oIMm_fz3q8qaHlSHUIjqM8lYZdEpuSjR5zxDQY9TubK7GURDVUoDJUQOCqADxiBGEuFQXW11Df2BZGZ0oo8xLxyxBl1dY9zmY8u_Td92ShbTCudoXPc9as3Hs8iTSNyK_V_-UPrT4zhrOe2qjH5n5O4pCHC-0Wahh3lkInPXe6TNG1Vcdo9djfmyyLDFTGoYQseC9wWK8Hzwe25oQbKPCDDsNYrxUZIbejzdpIWRhQ45OILJPM3inQ">
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">storefront</span>Recepção &amp; Hall
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-primary font-bold">Recepção e Acesso Principal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Entrada principal da instituição com mural informativo da ACEJUVI à esquerda, portas de vidro e visão direta da praça e pátio comunitário.
+</p>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Acesso Público
+</span>
+<span class="text-outline">Sede ACEJUVI</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden bg-primary">
+<img loading="lazy" decoding="async" alt="Mural de Informações Importantes com documentos, estatuto e termo de fomento afixados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8pwkJjTqEuDsu0Qn8Ryhhc1_qD_Cei753IG-Lm8ALqCitMwQpV7z3MRvhx4Y9MRG5uVmfg3BcscrDYafeZ_3V7Y59GzDE6oL2f3Oz-T13qg3tXXg5XOyDvMtKND3gGpp2AALNFK_UBX4bsGnIiOcZ1ubkDyTrKxf_yH9l5azgZ2MgruqgtYK148WSi6wj4wt2q3omNyokGeiY-epC4tFyUUIfm_4jZI1eI2jmtOiv9rNTyZzAzFqp1MFfRo6PInwuog">
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">push_pin</span>Mural Oficial
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-primary font-bold">Mural de Informações Importantes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Painel físico com CNPJ, ata de fundação, alteração estatutária, termo de fomento e chave PIX institucional para consulta integral de alunos e comunidade.
+</p>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span> 100% Afixado
+</span>
+<span class="text-outline">Mural Interno</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden bg-primary">
+<img loading="lazy" decoding="async" alt="Termo de Fomento FUNARTE nº 023/2023 - A Saga e a Luta do Mestre Besouro afixado no mural" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBonok9DGzu8uTS24AuliSmy4OJVtYglp8mKcBJ9nC4icR7JeEy8vBfkYyNf2uLODSy1voSt_B9Od82fSPAR-yeYaoMtYnKRlVSI4ldYzdcniXX23-ykB_a4in0LgNMrd2D5zlSud7LNQm0xUMQyb-13GPwaLSNezzZOoUU94sUfi_KOYY-HfIDFcZJcNZa6E0ps4cuLDGfKYzIYLvPYh69gJMPHMl8ngIQtnan-sA8P7lAZGyOlXEsIQFublk93MEM3Q">
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">description</span>Termo de Fomento
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-primary font-bold">Comprovação Termo FUNARTE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Cópia oficial afixada do Termo de Fomento nº 023/2023 (TRANFEREGOV nº 948099/2023), celebrado com o Ministério da Cultura e FUNARTE para o projeto.
+</p>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">gavel</span> Lei 13.019/2014
+</span>
+<span class="text-outline">Transparência Ativa</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden bg-primary">
+<img loading="lazy" decoding="async" alt="Banner do projeto A Saga e a Luta do Mestre Besouro com texto e QR Code" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJcV-3gRq7zmMgNiHHwbZtEerI8qnQADqO-iG_NIeZlZn5ulcqTXCf7WVhT3_K_4nAMbdyCrFiokbyDL3D1MNAGGRXERFJeSrRgEPYrHrC8mP7ENhxn5TUfS6tS5m-xy-6k6vGMJSv3guegQUNJyuRXZBQaSZE3ulAnp_9vvZzuN3ayMc182T8TQuqCjMiKPvPxgkPHLB_PuUFmIvgwI3ERsui_QGI7QZZKV1ZGgKvvX0hqcLSkxRDbsHIrhWIneOqAw">
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">campaign</span>Banner Oficial
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-primary font-bold">Banner Institucional e Apresentação</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Banner em primeiro plano com apresentação pedagógica, objetivos, emenda parlamentar, metas do Plano Nacional de Cultura e QR Code para acesso comunitário.
+</p>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span> Acesso via QR Code
+</span>
+<span class="text-outline">Comunicação Visual</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden bg-primary">
+<img loading="lazy" decoding="async" alt="Banner do projeto posicionado entre janelas com vista para o pátio arborizado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChA3lQwBumyzTQIVrhQDhcx7cWrOynLjtkiUQFnEocPzyFeofkg1kLTy_cwdG4TtM7phc-a_EEM0aHW32w_t5WY7Luhwedt_3FkuVMiGsmb9eAlgkPsNPPHDs3HP2RRXFHyM3z7j99qyDoWh0kPR5bcZoT4WQOsDcrgSgnGX4W97Wf8x9Vhc-kiGyEmeM0jm4SQrjoCTXixv7qbW5gUyC5HPMFBu5iizWh-XX9YkNoQ1G-8stODsXG1le8z8H8NjdT7g">
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">apartment</span>Espaço de Convivência
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-primary font-bold">Exposição no Salão de Convivência</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Banner informativo instalado entre janelas de iluminação natural com bancos e vista para o pátio e murais das oficinas pedagógicas da ACEJUVI.
+</p>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Visibilidade Total
+</span>
+<span class="text-outline">Área de Circulação</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
+<div>
+<div class="relative aspect-[4/3] overflow-hidden bg-primary">
+<img loading="lazy" decoding="async" alt="Banner montado na sala de espera com cadeiras e bancos de madeira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfj5iKX0iyZriDVMZ0EMnGZX7SFXGJt2A47bVS58MrvV_WfAKQfsza8AGqPRs_TMZQ4Bci3sig-dUXaFk261B2o5ITnhb7FaKgA8rR0_SLR3QKbgXcL0LnGqzYVpTAP5aVkzi6nemO9OQ5aNaaXxG6oxdh8-pwUp5z7cyKi4a4Kx5-_XNFUsCyywc4zCEiV0dN26J5VNXjz3ouseVA7WorIPAElzFm5qW1A_LmbBI-1nMdBADqW4FZUejidtinOMtoSw">
+<div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[15px]">chair</span>Sala de Espera
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs">
+<h3 class="font-title-md text-title-md text-primary font-bold">Divulgação na Sala de Atendimento</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+Disposição visual na área de acolhimento aos pais e visitantes, garantindo que toda a comunidade tenha acesso às diretrizes e fontes de fomento do projeto.
+</p>
+</div>
+</div>
+<div class="px-space-lg pb-space-lg pt-0">
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">groups</span> Acolhimento Comunitário
+</span>
+<span class="text-outline">Recepção e Espera</span>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Prestação de Contas & Accountability Container -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="bg-surface-container-lowest rounded-3xl p-space-xl lg:p-space-2xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<div class="w-12 h-12 rounded-2xl bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">policy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Conformidade e Acesso Público à Informação</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A ACEJUVI cumpre rigorosamente as normas de transparência pública da Lei nº 13.019/2014 (MROSC) e dos editais da Lei Paulo Gustavo. Todos os relatórios pedagógicos, notas fiscais e comprovações de público estão disponíveis para auditoria social, Ministério Público e órgãos concedentes.
+          </p>
+<div class="flex flex-wrap items-center gap-space-sm text-primary font-label-sm text-label-sm mt-space-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span> Metas pedagógicas 100% atingidas</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span> Frequência nominal arquivada</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span> Prestação contábil regular</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm w-full sm:w-auto shrink-0">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-2xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md transition-all" href="./docs/termo-fomento-funarte.pdf" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="">Termo de Fomento Funarte (PDF)</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-2xl bg-surface-container hover:bg-surface-variant text-primary font-label-sm text-label-sm transition-colors" data-path="transparencia-e-documentos" href="./landing.html?ver=1.0.71#principais-atividades">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+<span class="">Ver Portal Geral de Transparência ACEJUVI</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA & Donation Banner -->
+<section class="w-full py-space-3xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="relative rounded-3xl bg-gradient-to-br from-primary via-primary-container to-tertiary-container text-on-primary p-space-xl lg:p-space-3xl overflow-hidden shadow-xl">
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-xl">
+<span class="inline-block px-3 py-1 rounded-full bg-surface-container-lowest/15 text-tertiary-fixed font-label-sm text-label-sm font-bold w-fit">
+              Fortaleça a Juventude
+            </span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-primary tracking-tight">
+              Apoie a Continuidade de Nossos Projetos Culturais
+            </h2>
+<p class="font-body-md text-body-md text-surface-container-high leading-relaxed">
+              Sua colaboração mantém as oficinas de percussão, teatro e dança abertas para jovens de comunidades vulneráveis em Caldas Novas. Faça parte dessa transformação!
+            </p>
+</div>
+<!-- Pix Box Card -->
+<div class="w-full lg:w-[460px] bg-surface-container-lowest text-on-surface rounded-3xl p-space-xl shadow-xl flex flex-col gap-space-md" id="pix-interactive-box">
+<!-- Header -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">qr_code_2</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">Doação</h3>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold whitespace-nowrap">Oficial ACEJUVI</span>
+</div>
+<!-- Description -->
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+    Cada contribuição mantém os instrumentos afinados, a cozinha comunitária funcionando e os computadores ligados.
+  </p>
+<!-- Donation Amount Pills -->
+<div class="acejuvi-card-label"><span class="material-symbols-outlined">credit_card</span><span>Cartão de crédito</span></div><div class="grid grid-cols-4 gap-space-xs pt-1">
+<button class="pix-amt-btn py-2 text-center rounded-xl bg-surface-container-low font-label-sm text-label-sm text-primary hover:bg-secondary hover:text-on-secondary transition-all" onclick="selectDonation('29,99', this)" type="button" data-pagbank-url="https://pag.ae/8292tqu11/button" title="Pagar R$ 29,99 com PagBank">R$ 29,99</button>
+<button class="pix-amt-btn py-2 text-center rounded-xl bg-surface-container-low font-label-sm text-label-sm text-primary hover:bg-secondary hover:text-on-secondary transition-all" onclick="selectDonation('57,30', this)" type="button" data-pagbank-url="https://pag.ae/8292uVDr1/button" title="Pagar R$ 57,30 com PagBank">R$ 57,30</button>
+<button class="pix-amt-btn py-2 text-center rounded-xl bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm transition-all" onclick="selectDonation('100,00', this)" type="button" data-pagbank-url="https://pag.ae/8292vutTG/button" title="Pagar R$ 100,00 com PagBank">R$ 100,00</button>
+<button class="pix-amt-btn py-2 text-center rounded-xl bg-surface-container-low font-label-sm text-label-sm text-primary hover:bg-secondary hover:text-on-secondary transition-all truncate px-1" onclick="selectDonation('Outro', this)" type="button" data-pagbank-url="https://forms.gle/h842j5jVfKsSN9GK8" title="Informar outro valor de doação">Outro valor...</button>
+</div>
+<!-- PIX Key Box Container -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-space-xs mt-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-outline font-medium">Chave PIX (CNPJ)</span>
+<span class="text-primary font-semibold truncate ml-2">Associação Centro Juvenil Pela Vida</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-1">
+<code class="font-title-md text-title-md text-primary font-bold tracking-tight select-all" id="pix-key-val">22.762.329/0001-22</code>
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors cursor-pointer flex-shrink-0" id="copy-btn" onclick="copyPixKey(event)" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span class="" id="copy-text">Copiar</span>
+</button>
+</div>
+</div>
+<!-- Card Footer -->
+<div class="flex items-center gap-2 text-on-surface-variant pt-1">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transparência garantida com auditoria pública anual</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div><div class="zum-gallery-modal" id="zum-gallery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="zum-gallery-modal-title"><div class="zum-gallery-modal__card"><button class="zum-gallery-modal__close" id="zum-gallery-modal-close" type="button" aria-label="Fechar detalhes da imagem"><span class="material-symbols-outlined text-[22px]">close</span></button><img loading="lazy" decoding="async" class="zum-gallery-modal__image" id="zum-gallery-modal-image" src="" alt=""><div class="zum-gallery-modal__content"><span class="zum-gallery-modal__eyebrow" id="zum-gallery-modal-eyebrow">Projeto ZumZumZum</span><h3 class="zum-gallery-modal__title" id="zum-gallery-modal-title"></h3><p class="zum-gallery-modal__text" id="zum-gallery-modal-text"></p></div></div></div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-4px_24px_rgba(30,58,138,0.04)]"><div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-3xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-2xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGGF_ZonGNknY-4-ZjDxBEHRWkssrTFg3YgZFXnEkktDmc_WzVgbGxn_od7GhKHqGuhsEKl-NveJP24S-dQNXwj3WYLRMgtb4tWBvEfyg1ZZWWz_AdcRpc_FyAk3m3SpSaMRMqdQp3bzTZ_oDjHmnkjfv9BocyQApYPo-XcXiysJCLm0go55yi-s1lHQeNJNn4gYgEKM5VqARLWc4CtMTrRVznTgph-TiWYR0lVjJh4tRSiBWwBi-oMNnFI8nWb2cCDg" alt="ACEJUVI - Associação Centro Juvenil Pela Vida" class="h-12 w-auto object-contain rounded-2xl shadow-sm"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">ACEJUVI</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">Associação Centro Juvenil Pela Vida</span></div></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Transformando a realidade de crianças e jovens por meio da arte, educação, cultura, sustentabilidade e apoio comunitário integral no coração de Caldas Novas.</p><div class="flex items-center gap-space-sm pt-space-2xs"><a aria-label="Canal do YouTube ACEJUVI" class="acejuvi-social-icon acejuvi-social-youtube w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center transition-all" href="#"><svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg></a><a aria-label="Instagram Oficial ACEJUVI" class="acejuvi-social-icon acejuvi-social-instagram w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center transition-all" href="https://www.instagram.com/acejuvi_associacao/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a><a aria-label="WhatsApp Institucional ACEJUVI" class="acejuvi-social-icon acejuvi-social-whatsapp w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center transition-all" href="https://wa.me/5564992846885?text=Falar%20Conosco" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.46 17.51 2 12.04 2Zm5.77 14.15c-.24.68-1.39 1.3-1.95 1.34-.5.04-1.14.06-1.84-.12-.42-.11-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.59-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.84 2.01.91 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.17.29.75 1.24 1.61 2.01 1.1.98 2.04 1.29 2.33 1.43.29.14.46.12.63-.07.19-.22.72-.84.91-1.13.19-.29.38-.24.66-.14.27.1 1.72.81 2.01.96.29.14.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg></a></div></div><div class="lg:col-span-4 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary tracking-tight">Localização &amp; Atendimento</h4><div class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0">location_on</span><span class="">Rua João Da Cruz Qd. 47-a Lt. 01 Bairro Santa Efigênia, Caldas Novas - Goiás, CEP 75689246</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">mail</span><a class="hover:text-primary transition-colors" href="mailto:cejuvi@gmail.com">cejuvi@gmail.com</a></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[20px] flex-shrink-0">schedule</span><span class="">Segunda a Sexta: 07:00 às 20:00</span></div></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary tracking-tight">Projetos</h4><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="a-saga-do-mestre-besouro" href="./landing.html?ver=1.0.71#principais-atividades">Mestre Besouro</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="orquestra-espelho-das-aguas" href="./landing.html?ver=1.0.71#principais-atividades">Orquestra Espelho</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="sopa-fraterna" href="./landing.html?ver=1.0.71#principais-atividades">Sopa Fraterna</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="coleta-seletiva" href="./landing.html?ver=1.0.71#principais-atividades">Coleta Seletiva</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="cronograma-de-aulas" href="./landing.html?ver=1.0.71#inscricoes-presenciais">Oficinas &amp; Aulas</a></nav></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary tracking-tight">Transparência</h4><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentos-e-midias" href="./landing.html?ver=1.0.71#principais-atividades">Estatuto Social</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentos-e-midias" href="./landing.html?ver=1.0.71#principais-atividades">Prestação de Contas</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentos-e-midias" href="./landing.html?ver=1.0.71#principais-atividades">Certidões &amp; Atas</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="termos-de-uso" href="./landing.html?ver=1.0.71">Termos de Uso</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="politica-de-privacidade" href="./landing.html?ver=1.0.71">Privacidade (LGPD)</a></nav></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low rounded-xl px-space-lg py-space-sm"><p class="">© 2026 ACEJUVI — By <a class="font-semibold text-primary hover:text-secondary transition-colors" href="https://mktdumont.com/" target="_blank" rel="noopener noreferrer">MKTDumont</a>. Todos os direitos reservados.</p><div class="flex items-center gap-space-md font-label-sm text-label-sm"><a class="hover:text-primary transition-colors" data-path="politica-de-privacidade" href="./landing.html?ver=1.0.71">Privacidade</a><span class="">•</span><a class="hover:text-primary transition-colors" data-path="termos-de-uso" href="./landing.html?ver=1.0.71">Termos</a><span class="">•</span><a class="hover:text-primary transition-colors" data-path="contato" href="https://wa.me/5564992846885?text=Falar%20Conosco" target="_blank" rel="noopener noreferrer">Ouvidoria</a></div></div></div></footer>
+
+
+
+
+<script>(function(){function selectDonation(val,btn){document.querySelectorAll('.pix-amt-btn').forEach(function(b){b.classList.remove('bg-secondary','text-on-secondary','shadow-sm');b.classList.add('bg-surface-container-low','text-primary');});btn.classList.remove('bg-surface-container-low','text-primary');btn.classList.add('bg-secondary','text-on-secondary','shadow-sm');var pagbankUrl=btn.getAttribute('data-pagbank-url');if(pagbankUrl){window.open(pagbankUrl,'_blank','noopener,noreferrer');}}function copyPixKey(event){if(event){event.preventDefault();event.stopPropagation();}var keyEl=document.getElementById('pix-key-val');var copyText=document.getElementById('copy-text');var copyBtn=document.getElementById('copy-btn');var key=keyEl?keyEl.innerText:'22.762.329/0001-22';navigator.clipboard.writeText(key).then(function(){if(copyText)copyText.innerText='Copiado!';if(copyBtn){copyBtn.classList.remove('bg-primary');copyBtn.classList.add('bg-tertiary-container','text-tertiary-fixed');}setTimeout(function(){if(copyText)copyText.innerText='Copiar';if(copyBtn){copyBtn.classList.remove('bg-tertiary-container','text-tertiary-fixed');copyBtn.classList.add('bg-primary');}},2500);});}window.selectDonation=selectDonation;window.copyPixKey=copyPixKey;}());</script><script>(function(){const items=document.querySelectorAll('.coverflow-item');const dots=document.querySelectorAll('#coverflow-dots .dot');const prevBtn=document.getElementById('coverflow-prev');const nextBtn=document.getElementById('coverflow-next');const modal=document.getElementById('zum-gallery-modal');const modalImage=document.getElementById('zum-gallery-modal-image');const modalTitle=document.getElementById('zum-gallery-modal-title');const modalText=document.getElementById('zum-gallery-modal-text');const modalEyebrow=document.getElementById('zum-gallery-modal-eyebrow');const modalClose=document.getElementById('zum-gallery-modal-close');const galleryDetails=[{title:'Capoeira e Dança',eyebrow:'Corpo, roda e ancestralidade',text:'As vivências de capoeira e dança aproximam os jovens da cultura afro-brasileira, fortalecendo disciplina, ritmo, coordenação e pertencimento comunitário.'},{title:'Cordas e Violoncelo',eyebrow:'Orquestra Espelho das Águas',text:'A prática de violinos, violoncelos e teoria musical desenvolve escuta coletiva, concentração e sensibilidade artística, criando caminhos para novos talentos.'},{title:'Técnica de Violino',eyebrow:'Musicalização e harmonia',text:'Nas aulas de instrumento, cada estudante aprende postura, afinação e leitura musical em um processo paciente, colaborativo e voltado ao crescimento individual.'},{title:'Percussão e Bateria',eyebrow:'Ritmo e pulsação',text:'Os ensaios de percussão trabalham coordenação motora, memória rítmica e trabalho em grupo, conectando musicalidades populares, afro-brasileiras e contemporâneas.'},{title:'Dança no Tatame',eyebrow:'Expressão corporal',text:'O tatame se transforma em espaço de presença, oralidade e criação cênica, onde os jovens experimentam movimento, confiança e expressão em grupo.'},{title:'Equilíbrio e Foco',eyebrow:'Disciplina e cuidado',text:'Os exercícios de alongamento, equilíbrio e consciência corporal ajudam no foco, na autoconfiança e no cuidado com o próprio corpo durante as oficinas.'},{title:'Encenação e Teatro',eyebrow:'Teatro popular',text:'A encenação reúne memória, imaginação e convivência, preparando os jovens para comunicar histórias com voz, corpo, escuta e presença de palco.'}];if(!items.length)return;let current=1;function updateCoverflow(){const total=items.length;items.forEach((item,i)=>{let diff=(i-current)%total;if(diff<-Math.floor(total/2))diff+=total;if(diff>Math.floor(total/2))diff-=total;if(diff===0){item.style.transform='translateX(0px) scale(1) perspective(1000px) rotateY(0deg)';item.style.zIndex='20';item.style.opacity='1';item.style.filter='none';item.style.pointerEvents='auto';item.setAttribute('aria-label','Abrir detalhes da imagem em destaque');}else if(diff===-1){item.style.transform='translateX(-160px) scale(0.85) perspective(1000px) rotateY(12deg)';item.style.zIndex='10';item.style.opacity='0.85';item.style.filter='brightness(0.9)';item.style.pointerEvents='auto';item.setAttribute('aria-label','Trazer imagem para destaque');}else if(diff===1){item.style.transform='translateX(160px) scale(0.85) perspective(1000px) rotateY(-12deg)';item.style.zIndex='10';item.style.opacity='0.85';item.style.filter='brightness(0.9)';item.style.pointerEvents='auto';item.setAttribute('aria-label','Trazer imagem para destaque');}else if(diff===-2){item.style.transform='translateX(-280px) scale(0.7) perspective(1000px) rotateY(20deg)';item.style.zIndex='5';item.style.opacity='0.4';item.style.filter='brightness(0.7)';item.style.pointerEvents='none';}else if(diff===2){item.style.transform='translateX(280px) scale(0.7) perspective(1000px) rotateY(-20deg)';item.style.zIndex='5';item.style.opacity='0.4';item.style.filter='brightness(0.7)';item.style.pointerEvents='none';}else{item.style.transform='translateX('+(diff>0?360:-360)+'px) scale(0.5)';item.style.zIndex='1';item.style.opacity='0';item.style.pointerEvents='none';}});dots.forEach((dot,i)=>{if(i===current){dot.classList.add('bg-primary','w-6');dot.classList.remove('bg-outline-variant','w-2.5');}else{dot.classList.remove('bg-primary','w-6');dot.classList.add('bg-outline-variant','w-2.5');}});}function openGalleryModal(idx){if(!modal)return;const item=items[idx];const img=item?item.querySelector('img'):null;const details=galleryDetails[idx]||galleryDetails[0];if(modalImage&&img){modalImage.src=img.src;modalImage.alt=img.alt||details.title;}if(modalTitle)modalTitle.textContent=details.title;if(modalText)modalText.textContent=details.text;if(modalEyebrow)modalEyebrow.textContent=details.eyebrow;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('zum-modal-open');if(modalClose)modalClose.focus();}function closeGalleryModal(){if(!modal)return;modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('zum-modal-open');}if(prevBtn){prevBtn.addEventListener('click',function(e){e.preventDefault();current=(current-1+items.length)%items.length;updateCoverflow();});}if(nextBtn){nextBtn.addEventListener('click',function(e){e.preventDefault();current=(current+1)%items.length;updateCoverflow();});}items.forEach((item,idx)=>{item.setAttribute('role','button');item.setAttribute('tabindex','0');item.addEventListener('click',function(){if(current!==idx){current=idx;updateCoverflow();return;}openGalleryModal(idx);});item.addEventListener('keydown',function(event){if(event.key==='Enter'||event.key===' '){event.preventDefault();if(current!==idx){current=idx;updateCoverflow();return;}openGalleryModal(idx);}});});dots.forEach((dot,idx)=>{dot.addEventListener('click',function(){current=idx;updateCoverflow();});});if(modalClose){modalClose.addEventListener('click',closeGalleryModal);}if(modal){modal.addEventListener('click',function(event){if(event.target===modal)closeGalleryModal();});}document.addEventListener('keydown',function(event){if(event.key==='Escape'&&modal&&modal.classList.contains('is-open'))closeGalleryModal();});updateCoverflow();})();</script><script id="acejuvi-unified-interaction-script">
+(function () {
+  var header = document.getElementById('acejuvi-site-header');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setHeaderOffsets() {
+    if (!header) return;
+    var offset = Math.max(96, Math.ceil(header.offsetHeight + 14));
+    document.documentElement.style.setProperty('--acejuvi-header-offset', offset + 'px');
+    document.documentElement.style.setProperty('--acejuvi-scroll-offset', Math.ceil(offset + 12) + 'px');
+  }
+
+  function samePageHashLink(link) {
+    if (!link || !link.hash || link.getAttribute('href') === '#') return null;
+    var url;
+    try { url = new URL(link.getAttribute('href'), window.location.href); } catch (e) { return null; }
+    if (url.pathname !== window.location.pathname) return null;
+    return document.getElementById(decodeURIComponent(url.hash.slice(1)));
+  }
+
+  function scrollToTarget(target) {
+    if (!target) return;
+    var offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--acejuvi-scroll-offset'), 10) || 130;
+    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+
+  function syncHeaderState() {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+    var activeId = '';
+    var offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--acejuvi-scroll-offset'), 10) || 130;
+    document.querySelectorAll('main section[id]').forEach(function (section) {
+      if (section.getBoundingClientRect().top <= offset + 24) {
+        activeId = section.id;
+      }
+    });
+    document.querySelectorAll('#acejuvi-site-header a.is-section-active, .acejuvi-mobile-drawer a.is-section-active').forEach(function (link) {
+      link.classList.remove('is-section-active');
+    });
+    if (activeId) {
+      document.querySelectorAll('#acejuvi-site-header a[href$="#' + activeId + '"], #acejuvi-site-header a[href="#' + activeId + '"], .acejuvi-mobile-drawer a[href$="#' + activeId + '"]').forEach(function (link) {
+        link.classList.add('is-section-active');
+      });
+    }
+  }
+
+  function setupMobileMenu() {
+    if (!header || header.querySelector('.acejuvi-mobile-toggle')) return;
+    var inner = header.querySelector('div.h-20 > div');
+    var nav = header.querySelector('nav');
+    if (!inner || !nav) return;
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'acejuvi-mobile-toggle';
+    toggle.setAttribute('aria-label', 'Abrir menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<span class="material-symbols-outlined text-[24px]">menu</span>';
+    var cta = inner.querySelector('[data-path="doacoes-pix"]');
+    var ctaWrap = cta ? cta.parentElement : null;
+    inner.insertBefore(toggle, ctaWrap || null);
+
+    var drawer = document.createElement('div');
+    drawer.className = 'acejuvi-mobile-drawer';
+    drawer.setAttribute('aria-hidden', 'true');
+    nav.querySelectorAll('a').forEach(function (link) {
+      var clone = link.cloneNode(true);
+      clone.removeAttribute('class');
+      clone.innerHTML = '<span>' + link.textContent.trim() + '</span><span class="material-symbols-outlined text-[18px]">chevron_right</span>';
+      drawer.appendChild(clone);
+    });
+    document.body.appendChild(drawer);
+
+    function closeMenu() {
+      drawer.classList.remove('is-open');
+      drawer.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = '<span class="material-symbols-outlined text-[24px]">menu</span>';
+    }
+
+    toggle.addEventListener('click', function () {
+      var open = !drawer.classList.contains('is-open');
+      drawer.classList.toggle('is-open', open);
+      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.innerHTML = '<span class="material-symbols-outlined text-[24px]">' + (open ? 'close' : 'menu') + '</span>';
+      setHeaderOffsets();
+    });
+    drawer.addEventListener('click', function (event) {
+      if (event.target.closest('a')) closeMenu();
+    });
+    window.addEventListener('resize', closeMenu);
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+  }
+
+  function setupAnchorScrolling() {
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a[href*="#"]');
+      var target = samePageHashLink(link);
+      if (!target) return;
+      event.preventDefault();
+      history.pushState(null, '', link.hash);
+      setHeaderOffsets();
+      scrollToTarget(target);
+    });
+    if (window.location.hash) {
+      setTimeout(function () {
+        var target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+        setHeaderOffsets();
+        scrollToTarget(target);
+      }, 160);
+    }
+  }
+  function init() {
+    setHeaderOffsets();
+    setupMobileMenu();
+    setupAnchorScrolling();
+    syncHeaderState();
+    setTimeout(setHeaderOffsets, 250);
+    setTimeout(syncHeaderState, 300);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+  window.addEventListener('resize', function () { setHeaderOffsets(); syncHeaderState(); });
+  window.addEventListener('pageshow', function () { setHeaderOffsets(); syncHeaderState(); });
+}());
+</script><script id="acejuvi-entry-interaction-script">
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var items = Array.prototype.slice.call(document.querySelectorAll('main section:not(#hero-slider-section), footer'));
+  items.forEach(function(item, index){
+    if (index === 0) return;
+    item.classList.add('acejuvi-entry-ready');
+  });
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(item){ item.classList.add('acejuvi-entry-visible'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('acejuvi-entry-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  items.forEach(function(item, index){
+    if (index === 0) return;
+    observer.observe(item);
+  });
+})();
+</script><script id="acejuvi-youth-bg-script">
+(function(){
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var iconSets = [
+    [
+      ['music_note','acejuvi-youth-blue','5%','15%','38','-10deg','-1s','58px'],
+      ['menu_book','acejuvi-youth-gold acejuvi-youth-wide','84%','22%','-34','8deg','-4s','74px'],
+      ['favorite','acejuvi-youth-red acejuvi-youth-small','10%','76%','30','12deg','-7s','48px']
+    ],
+    [
+      ['diversity_1','acejuvi-youth-green','88%','18%','-38','10deg','-2s','60px'],
+      ['palette','acejuvi-youth-gold acejuvi-youth-small','8%','58%','32','-8deg','-5s','48px'],
+      ['school','acejuvi-youth-blue acejuvi-youth-wide','82%','82%','-34','7deg','-8s','76px']
+    ],
+    [
+      ['sports_soccer','acejuvi-youth-green acejuvi-youth-small','8%','24%','34','14deg','-3s','48px'],
+      ['theater_comedy','acejuvi-youth-blue','88%','58%','-40','12deg','-6s','62px'],
+      ['volunteer_activism','acejuvi-youth-red acejuvi-youth-small','12%','84%','32','-9deg','-9s','48px']
+    ]
+  ];
+  function buildIcon(item) {
+    var wrap = document.createElement('span');
+    wrap.className = 'acejuvi-youth-float ' + item[1];
+    wrap.style.cssText = '--x:' + item[2] + ';--y:' + item[3] + ';--d:' + item[4] + ';--r:' + item[5] + ';--delay:' + item[6] + ';--s:' + item[7] + ';--br:' + (item[1].indexOf('acejuvi-youth-wide') > -1 ? '44% 56% 48% 52% / 55% 44% 56% 45%' : '48% 52% 46% 54% / 52% 45% 55% 48%') + ';';
+    var icon = document.createElement('span');
+    icon.className = 'material-symbols-outlined';
+    icon.textContent = item[0];
+    wrap.appendChild(icon);
+    return wrap;
+  }
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section:not(#hero-slider-section):not(#acejuvi-final-cta), footer'));
+  sections.forEach(function(section, index){
+    if (section.querySelector('.acejuvi-youth-section-bg')) return;
+    section.setAttribute('data-acejuvi-youth-decorated', 'true');
+    var layer = document.createElement('div');
+    layer.className = 'acejuvi-youth-section-bg';
+    iconSets[index % iconSets.length].forEach(function(item){ layer.appendChild(buildIcon(item)); });
+    section.insertBefore(layer, section.firstChild);
+    var currentX = 0, currentY = 0, targetX = 0, targetY = 0, frame = null;
+    function animate() {
+      currentX += (targetX - currentX) * 0.22;
+      currentY += (targetY - currentY) * 0.22;
+      layer.style.setProperty('--mx', currentX.toFixed(3));
+      layer.style.setProperty('--my', currentY.toFixed(3));
+      if (Math.abs(targetX - currentX) > 0.002 || Math.abs(targetY - currentY) > 0.002) {
+        frame = window.requestAnimationFrame(animate);
+      } else {
+        frame = null;
+      }
+    }
+    function start() {
+      if (!frame) frame = window.requestAnimationFrame(animate);
+    }
+    section.addEventListener('pointermove', function(event){
+      var rect = section.getBoundingClientRect();
+      targetX = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+      targetY = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+      layer.style.setProperty('--active', '1');
+      start();
+    }, { passive: true });
+    section.addEventListener('pointerleave', function(){
+      targetX = 0;
+      targetY = 0;
+      layer.style.setProperty('--active', '0');
+      start();
+    }, { passive: true });
+  });
+})();
+</script></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

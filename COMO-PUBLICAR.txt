@@ -1,0 +1,15 @@
+COMO COLOCAR NO SEU GITHUB
+
+Nome sugerido: acejuvi-site-institucional
+Descrição sugerida: Site institucional da ACEJUVI com HTML, CSS, JavaScript e plugin próprio para WordPress.
+
+1. Entre na sua conta do GitHub e crie um novo repositório com o nome sugerido.
+2. Para aparecer no seu portfólio, selecione a visibilidade pública.
+3. Na página do repositório, use a opção para enviar arquivos (Upload files).
+4. Envie o CONTEÚDO da pasta acejuvi-portfolio-github, incluindo README.md, .gitignore e as quatro pastas do projeto. Não envie somente o ZIP: extraia-o primeiro.
+5. Confirme o envio com uma mensagem como: Adiciona projeto institucional ACEJUVI.
+6. Se desejar destacar o trabalho, fixe esse repositório no seu perfil.
+
+Esta cópia não tem vínculo com a hospedagem nem publicação automática. Enviá-la ao GitHub não atualiza o WordPress. Não é necessário instalar nada no site atual.
+
+O pacote contém código e materiais disponíveis nesta pasta local. Não inclui exportação do banco de dados, painel WordPress ou backup completo da hospedagem.
